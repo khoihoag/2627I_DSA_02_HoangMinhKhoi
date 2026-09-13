@@ -1,0 +1,19 @@
+public void union(int p, int q) {
+    for (int i=0; i<this.leader.length; i++) {
+        if (leader[i] == leader[p]) {
+            leader[i] = leader[q];
+        }
+    }
+}
+
+
+- Lỗi xảy ra tại dòng if (leader[i] == leader[p], nếu i == p thì sẽ đổi leader[p] thành leader[q] khi đó if sẽ trở thành if (leader[i] == leader[q])  làm cho các phần tử có giá trị bằng leader[p] không dổi lại được
+
+VD:
+leader = [0, 1, 2]
+
+gọi union(0, 1) => leader = [1, 1, 2]
+gọi union(0, 2):
+khi i = 0: if(leader[0] == leader[0]) => leader = [2, 1, 2]
+khi i = = 1: ìf leader[1] == leader[0] những leader[0] đã bị chuyển thành 2 => leader[1] vẫn giữ nguyên \
+=> các phần tử 0, 1, 2 cùng một tập những lại có gia trị khác nhau
