@@ -1,0 +1,8 @@
+(0,4)       hợp lệ      tạo cạnh 0 -> 4
+(2,3)	    không       hiện tại 2 không trỏ trực tiếp vào 3
+(4,0)	    không       sẽ tạo 4 -> 0, không phải hiện tại
+(4,5)	    hợp lệ      tạo 5 -> 4
+(5,0)	    không	    không tạo cạnh cuối 5 -> 4
+(5,7)	    không	    7 đang là con của 5
+(6,4)	    hơp lệ  	tạo 6 → 4
+(8,9)	    không	    sẽ tạo 9 → 8, nhưng đây là cây riêng và không liên quan đến root 4

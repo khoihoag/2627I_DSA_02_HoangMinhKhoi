@@ -1,0 +1,2 @@
+Không thể tạo được cây con như đầu bài
+Vì : để 4 hoặc 6 nối được với 0 thì khi đấy 0 phải là gốc nếu không thì sẽ được nối vào 5 => cây con 0 được nối hoàn chỉnh (có các ndoe con 2,4,6) trước khi gộp vào 5 mà khi đấy size(0) = 7 size(5) max là 3 nên không thể

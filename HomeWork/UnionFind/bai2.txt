@@ -1,0 +1,14 @@
+a. Cấu trúc dữ liệu thu được đúng 1 thành phần liên thông
+b. Có 1+2+3+...+(N-1) = (n-1)n/2 = (n^2-n)/2 ~ (n^2)/2 lần cập nhật mảng được thực hiện theo taho tác Union()
+c. Do thao tác union(p, q) của chúng ta không bao giờ thay đổi parent[p]
+=> Biểu diễn cây qua các thao tác:
+union(0, 1): root của 0 là 0, root của 1 là 1 => parent[0] = 1.
+union(0, 2): root của 0 hiện tại là 1, root của 2 là 2 => parent[1] = 2.
+union(0, 3): root của 0 hiện tại là 2, root của $3$ là 3 => parent[2] = 3
+
+
+Do đó find(0): đi từ 0 => n-1 phải đọc qua parent[0], parent[1], ... parent[n-1] và qua mỗi lần sẽ phải qua 1 lần kiểm tra điều kiện
+
+=> cần 2n-1 truy cập mảng => Theta(n)
+
+d. find(0) chỉ tốn 1 lần truy cập mảng vì 0 luôn là gốc cảu cây
