@@ -1,0 +1,9 @@
+a. Chuỗi sau sẽ in ra nội dung: 0 0 2 0 2 4 0 2 4 6.
+
+b. Trong trường hợp tồi tệ nhất: O(n). Vì nếu thao tác enqueue() ở thao tác thứ 3 thì phải duyệt lại toàn bộ queue để tự in ra tất cả các phần tử
+
+c. Tổng chi phí các lần print sẽ có dạng:
+        S = 3 + 6 + 9 + ... + n = 3 * (1 + 2 + 3 + ... + n/3)
+    vói k = n/3: S = 1 + 2 + ... + k = O(k^2)
+    => Tổng thời gian: O(n^2)
+    => Trung bình mỗi thao tác: O(n ^ 2) / n = O(n)
